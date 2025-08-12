@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>NeuralVision - Advanced Medical AI Dashboard</title>
+    <meta name="description" content="Cutting-edge medical AI dashboard for chest X-ray analysis, diagnosis, and neural network performance monitoring. Real-time medical image processing with advanced CNN models." />
+    <meta name="keywords" content="medical AI, chest x-ray, neural networks, medical diagnosis, CNN, deep learning, healthcare technology" />
+    <meta name="author" content="NeuralVision Team" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="NeuralVision - Advanced Medical AI Dashboard" />
+    <meta property="og:description" content="Revolutionary medical AI platform for chest X-ray analysis and diagnosis using state-of-the-art neural networks." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://neuralvision.netlify.app" />
+    <meta property="og:image" content="/og-image.png" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NeuralVision - Medical AI Dashboard" />
+    <meta name="twitter:description" content="Advanced medical AI dashboard for chest X-ray analysis and diagnosis" />
+    <meta name="twitter:image" content="/twitter-image.png" />
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#00ffff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="NeuralVision" />
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "NeuralVision",
+      "description": "Advanced medical AI dashboard for chest X-ray analysis and diagnosis",
+      "url": "https://neuralvision.netlify.app",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "NeuralVision Team"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
